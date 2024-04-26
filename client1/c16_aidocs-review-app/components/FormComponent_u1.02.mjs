@@ -4,6 +4,7 @@
 ##RFILE    +====================+=======+===============+======+=================+
 ##FD   FormComponent.mjs        |   7453|  4/08/24  7:45|   153| u1.02`40408.0745
 ##FD   FormComponent.mjs        |   7596|  4/12/24 15:17|   155| u1.02`40412.1517
+##FD   FormComponent.mjs        |   8364|  4/21/24 21:30|   179| u1.02`40421.2130
 ##DESC     .--------------------+-------+---------------+------+-----------------+
 #           This JavaScript Lit Component file creates the HTML tag form-component.
 #           It is defined in the class FormComponent that includes styles that
@@ -23,12 +24,13 @@
 # .(40405.06  4/05/24 RAM  6:30p|  Add bNoAlert to browser Alert()
 # .(40408.03  4/08/24 RAM  7:45a|  Clear Prompt Form Field
 # .(40412.01  4/12/24 RAM  3:17p|  Add JPT's Doc Header Info
+# .(40422.03  4/21/24 RAM  9:30p|  Import Msg Comp failed on Mac
                                 |
 ##SRCE     +====================+===============================================+
 \*/
    import { LitElement, html, css } from 'https://cdn.jsdelivr.net/gh/lit/dist@2/core/lit-core.min.js';
    import { setPromptValue        } from '../utils/GlobalState_u1.02.mjs';  // Import setPromptValue"
-// import { MessagesComponent     } from '../models/MessagesComponent.mjs'; // Assuming MessagesComponent is in the same directory
+// import { MessagesComponent     } from './MessagesComponent.mjs';         // .(40422.03.1 RAM Indeed, Assuming MessagesComponent is in the same directory)
 
 //----------------------------------------------------------------
     var bNoAlert = true                                                                                     // .(40405.06.1)
@@ -49,7 +51,7 @@ class FormComponent extends LitElement {
         font-size       :  14px;
         padding-top     :  5px;
         width:          :  280px;
-        padding-left    :  15px;
+        padding-left    :  35px;
         }
 
       button {
@@ -64,8 +66,9 @@ class FormComponent extends LitElement {
 
       .fld-text {
         flex            :  1;
-        color           : #333;
-        max-width       :  700px;
+        color           :  #333;
+        width           :  780px;
+        max-width       :  780px;
         min-width       :  340px;
         height          :  15px;
         margin          :  0 auto;
@@ -87,20 +90,20 @@ class FormComponent extends LitElement {
         font-size       :  1.3rem;
         font-weight     :  700;
         padding-bottom  :  10px;
-      } 
-      
+      }
+
       @media only screen
-      and (max-width: 440px)  
+      and (max-width: 440px)
       {
         .fld-text {
           max-width       :  0px;
-        } 
+        }
         .prompt {
           font-size       :  1.2rem;
           font-weight     :  700;
           padding-bottom  :  10px;
           margin-left     :   0px;
-        } 
+        }
       }
 
     ` }; // eof get Styles

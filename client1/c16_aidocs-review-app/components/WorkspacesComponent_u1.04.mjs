@@ -51,8 +51,9 @@
     static get styles() {
       return css`
         #WorkspaceList {
+          display         : none;
           position        : relative;
-          top             : 40px;                                                      /* .(40408.01.7 RAM Was 10px; in _v1.03.40410.1120-Rick) */
+          top             : 20px;                                                      /* .(40408.01.7 RAM Was 10px; in _v1.03.40410.1120-Rick) */
           text-align      : left;
           margin-right    : 10px;
           }

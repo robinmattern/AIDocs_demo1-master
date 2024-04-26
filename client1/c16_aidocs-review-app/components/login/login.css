@@ -1,30 +1,9 @@
-/* . .
-##=========+====================+================================================+
-##RD        Login               | AIDocs-Review Login Page Stylesheet
-##RFILE    +====================+=======+===============+======+=================+
-##FD   login.css                |   7774|  4/13/24 14:45|   307| v1.07`40413.1445
-##DESC     .--------------------+-------+---------------+------+-----------------+
-#           This CSS file contains the HTML styles for the AIDocs-Review login page.
-#           It was origionally developed by Rick Shinner as parts of the IODD App
-#           project.
-##LIC      .--------------------+----------------------------------------------+
-#           Copyright (c) 2024 8020Data-formR * Released under
-#           MIT License: http://www.opensource.org/licenses/mit-license.php
-##FNCS     .--------------------+----------------------------------------------+
-
-##CHGS     .--------------------+----------------------------------------------+
-# .(40412.04  4/12/24 RJS 12:22p|  Copied from IODD project
-# .(40412.01  4/12/24 RAM  4:00p|  Add JPT's Doc Header Info
-# .(40413.02  4/13/24 RAM  2:45p|  Prepare login for release
-                                |
-##SRCE     +====================+===============================================+
-*/
 :root {
-/*    --Body_background-color: #E5E4E2; /*platinum*/
+  /*    --Body_background-color: #E5E4E2; /*platinum*/
       --Body_background-color: whitesmoke; /*platinum*/
-
+     
       --Header_background-color: blue;
-/*    --Header_background-color: #FF7034; /*FormR Orange*/
+      /*--Header_background-color: #FF7034; /*FormR Orange*/  
       --Header_hover-color: white;
       --HeaderLogo-image: "";
       --HeaderLogo_margin: 35px 0 0 0px;
@@ -32,23 +11,23 @@
       --HeaderList-font-size: 1.2rem;
       --HeaderHeight: 20px%;
       --ShowMoreColor: black;
-
+  
       --Marketing_height: 140px;
       --Marketing_background-color: whitesmoke;
-
+   
       --HiddenSection_background-color: whitesmoke;
       --HiddenSection_height: 0%;
-
+  
       --Chat_background-color: #E5E4E2; /*platinum*/
       --Chat_height: 90%;
-
+  
   /*  --Footer_background-color:  #E5E4E2; /*platinum*/
       --Footer_background-color:  whitesmoke;
       --Footer_hover-color: white;
-      --FooterList-font-size: .9rem;
-
+      --FooterList-font-size: .9rem;  
+      
       --GlobalFontFamily: "Frank Ruhl Libre", "EB Garamond";
-
+  
       --Button_Logo_font-color: whitesmoke;
   }
 
@@ -59,7 +38,7 @@
   font-size: 16px;
 }
 /*----------------------------------------------
-The <html> tag properites (unchanged)
+The <html> tag properties (unchanged)
 -----------------------------------------------*/
 html {
   background: var(--Body_background-color);
@@ -69,6 +48,17 @@ html {
   margin: auto;
 }
 /* END HTML ===================================*/
+
+/*----------------------------------------------
+The body properties
+-----------------------------------------------*/
+body {
+  background: var(--Body_background-color);
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: var(--GlobalFontFamily);
+}
 
 .logout-temp-div {
   display: none;
@@ -110,7 +100,7 @@ html {
   text-decoration: none;
   font-size: 2.5rem;
   font-family: var(--HeaderLogo-FontFamily);
-  font-weight: 600;
+  font-weight: 600;    
   color: var(--Button_Logo_font-color);
   font-style: italic;
 }
@@ -122,9 +112,9 @@ html {
     text-decoration: none;
     font-size: 2rem;
     font-family: var(--HeaderLogo-FontFamily);
-    font-weight: 600;
+    font-weight: 600;    
     color: var(--Button_Logo_font-color);
-
+    
     /*
     font-style: italic;
     background: blue ;
@@ -134,7 +124,7 @@ html {
 }
 .ShowMore {
   color: var(--ShowMoreColor);
-  font-weight: 600;
+  font-weight: 600;    
 }
 
 .HeaderLogoDemo {
@@ -145,7 +135,7 @@ html {
     text-decoration: none;
     font-size: 1rem;
     font-family: var(--HeaderLogo-FontFamily);
-    font-weight: 500;
+    font-weight: 500;    
     color: var(--Button_Logo_font-color);
     /*
     font-style: italic;
@@ -160,7 +150,7 @@ html {
   width: var(--GlobalMaxWidth);
   width: 100%;
   top: 60px;
-  left: 0px;
+  left: 0px;  
 /*  background: url( '../assets/images/monaco-blue-soft.jpg');*/
   background-color: #E5E4E2;  /*platinum*/
   background-repeat: no-repeat;
@@ -176,7 +166,7 @@ html {
   text-decoration: none;
   font-size: 2.5rem;
   font-family: var(--HeaderLogo-FontFamily);
-  font-weight: 600;
+  font-weight: 600;    
   color: var(--Button_Logo_font-color);
   font-style: italic;
 
@@ -219,7 +209,7 @@ html {
   /* background-color: #3274d6;
   color: #ffffff; */
 }
-.login form input[type="password"],
+.login form input[type="password"], 
 .login form input[type="text"] {
   width: 310px;
   height: 50px;
@@ -259,7 +249,7 @@ background-color: #2868c7;
   display: none;
 }
 .checker {
-  background-image: url('./assets/images/eyeball.gif');    /* .(40412.04.02 RAM Was '../assets/...) */
+  background-image: url('../assets/images/eyeball.gif');
   background-position: left center;
   background-size: auto 30%;
   width: 25px;
@@ -293,7 +283,7 @@ background-color: #2868c7;
   /* opacity: 0.82; */
   /* border-top: dotted 2px #696969; */
 
-}
+} 
 .FooterNavList {
   justify-content: center;
   padding-left: 0px;

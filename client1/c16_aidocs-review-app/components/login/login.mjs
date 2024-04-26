@@ -1,4 +1,4 @@
-/* . .
+/*
 ##=========+====================+================================================+
 ##RD       login.mjs            |  Robin's refactored script for login form
 ##RFILE    +====================+=======+===============+======+=================+
@@ -10,8 +10,6 @@
 ##FD   login_v1.07c.mjs         |  29375|  5/03/23 09:36|   410| u1.07`30503.0936
 ##FD   login_v1.07c.mjs         |  29592|  5/05/23 01:57|   412| u1.07`30505.0157
 ##FD   login_v1.07c.mjs         |  29850|  5/08/23 17:20|   415| u1.07`30508.1715
-##FD   login.mjs                |  30057|  4/12/24 12:22|   419| u1.07`40412.1422
-##FD   login.mjs                |  30200|  4/13/24 14:45|   421| u1.07`40413.1445
 ##DESC     .--------------------+-------+---------------+------+-----------------+
 #           This JavaScript file ...
 ##LIC      .--------------------+----------------------------------------------+
@@ -59,15 +57,12 @@
 # .(30503.01  5/03/23 RAM  9:36a|  Use sayMsg for bQuiet
 # .(30505.01  5/05/23 RAM  1:57p|  Use aAction not aURL in fetchLoginData errmsg
 # .(30508.01  5/08/23 RAM  5:20p|  Redirect to home: `${aVIR_DIR}/`
-# .(40412.04  4/12/24 RJS 12:22p|  Copied from IODD login
-# .(40413.02  4/13/24 RAM  2:45p|  Prepare login for release
 
 ##SRCE     +====================+===============================================+
 */
-// import { handleFormSubmit, sayMsg, fmtMsg, fmtErr } from    '../assets/mjs/formr_utility-fns_u1.07.mjs' //#.(30428.04.2 Import 'em)
-// import { handleFormSubmit                         } from    '../assets/mjs/formr_utility-fns_u1.07.mjs' // .(30428.04.2 Import 'it)
-// import { sayMsg                                   } from    '../assets/mjs/formr_utility-fns_u1.07.mjs' //#.(30503.01.28).(40413.02.8)
-   import { sayMsg                                   } from '../../utils/FRTs/formr_utility-fns_u1.08.mjs' // .(40413.02.8 RAM)
+// import { handleFormSubmit, sayMsg, fmtMsg, fmtErr } from '../assets/mjs/formr_utility-fns_u1.07.mjs' //#.(30428.04.2 Import 'em)
+// import { handleFormSubmit                         } from '../assets/mjs/formr_utility-fns_u1.07.mjs' // .(30428.04.2 Import 'it)
+   import { sayMsg                                   } from '../assets/mjs/formr_utility-fns_u1.07.mjs' // .(30503.01.28)
 
 var id = 90
 //debugger
@@ -360,7 +355,7 @@ var id = 90
             return
             }
 
-       var  pLogin       =  pJSON.login[362]                                                        // .(30428.03.4)
+       var  pLogin       =  pJSON.login[0]                                                        // .(30428.03.4)
             sayMsg( 1,     `onLog~Succ[3]  Username and Password found:`)                         // .(30423.03.8).(30503.01.23)
             sayMsg( 2, `onLoginSuccess[3]  Username and Password found for ${pLogin.FullName}`)   // .(30428.03.5).(30503.01.24)
             sayMsg( 2,      pLogin )                                                              // .(30503.01.25)
