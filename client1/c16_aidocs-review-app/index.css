@@ -325,6 +325,8 @@ The Modal Popup properties
   display: none;
   align-items:first baseline;
   justify-content: center;
+  padding-left: 50px;
+  top: 0px;
 }
 
 .content {
@@ -332,7 +334,12 @@ The Modal Popup properties
   background: lightgray;
   padding: 1em 2em;
   border-radius: 4px;
-  width: 50%;
+  width: 70%;
+  top: 130px;
+  /*
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  */
 }
 
 .modal:target {
