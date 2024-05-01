@@ -95,7 +95,7 @@ body {
     background: var(--Body_background-color);
     height: 100%;
     width: 100%;
-    margin: 0;
+    margin: 0 auto;
     font-family: var(--GlobalFontFamily);
 }
 
@@ -283,8 +283,9 @@ The .Chat properties
 .Chat {
   background: var(--Chat_background-color);
   width: 1100px;                                                        /* .(40426.01.12 RJS Was auto;) */
-  height: 2000vh;                                                       /* .(40426.01.13 RJS Was 100p%;) */
+  height: 645px;                                                       /* .(40426.01.13 RJS Was 100p%;) */
   position: relative;
+  display: block;
   color: black;
   font-family: var(--GlobalFontFamily);
   font-size: 1.2rem;
@@ -292,9 +293,11 @@ The .Chat properties
   top: 190px;                                                           /* .(40429.01.4 RJS Was: 183px;).(40426.01.14 RJS Was 120px;) *//*var(--Chat_top-margin);<---ADD to adjust the top position .(40410.06.2 RJS Change Chat Height, was 60).(40408.01.5 RAM Was: 40px) */
   overflow-y: scroll;                                                   /* .(40426.01.15 RJS Beg Added) */
   scroll-behavior: auto;
+  scrollbar-color: #A1A1A1 #DDDDDD;
 }
 
-.Chat::-webkit-scrollbar {
+
+body::-webkit-scrollbar {
   display: none;
 }                                                                       /* .(40426.01.15 RJS End) */
 /* END S2R-1 .Chat ===========================*/
@@ -349,7 +352,7 @@ The Modal Popup properties
   background: lightgray;
   padding: 1em 2em;
   border-radius: 4px;
-  width: 70%;                                                           /* .(40426.01.18 RJS Was: 50%;) */
+  width: 60%;                                                           /* .(40426.01.18 RJS Was: 50%;) */
   top: 130px;                                                           /* .(40426.01.19 RJS Added) */
   /*
   scroll-behavior: smooth;
@@ -379,9 +382,10 @@ The .Footer properties
     /*top: 80px;  Removed in place of the bottom property*/
     bottom: 0;
     position: fixed;
+    display: block;
     z-index: 2;                                                         /* .(40426.01.21 RJS Was: 99) */
     max-width: 1100px;                                                  /* .(40426.01.22 RJS Was: 1000px;) */
-    margin: auto;
+    margin: 0 auto;
   }
 /* END FR-1 .Footer =============================*/
 /*------------------------------------------------

@@ -50,6 +50,7 @@ class FormComponent extends LitElement {
       form {
         display         :  flex;
         margin-top      :  20px;
+        margin-bottom   :  100px;
         }
 
       label {
