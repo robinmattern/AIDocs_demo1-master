@@ -116,9 +116,15 @@ return  aColor
           and (max-width: 1000px)
           {
             .user-message {
-              margin-top      : 20px
+              margin-top      : 20px;
+              max-width       : 615px;
               }
-
+            .message {
+              max-width       : 590px;
+              margin-left     : 40px;
+              margin-top      : 10px;
+              font-size       : 14px
+            }
           }        
       `;
       }

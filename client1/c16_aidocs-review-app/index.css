@@ -73,6 +73,7 @@
 
     --GlobalFontFamily: Arial, Helvetica, sans-serif;
 
+    --SevenHundredPixelWidth: 720px;
 }
 /* END REPLACE :root ==========================*/
 
@@ -83,8 +84,9 @@ html {
     background: var(--Body_background-color);
     height: 100%;
     text-align: center;
-    max-width: 1000px;
-    margin: auto;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
 }
 /* END HTML ===================================*/
 
@@ -98,7 +100,11 @@ body {
     margin: 0 auto;
     font-family: var(--GlobalFontFamily);
 }
-
+.container {
+  align-self: center;
+  margin: 0 auto;
+  width: 80%;
+}
 /*------------------------------------------------
 The .Header properties
 -------------------------------------------------*/
@@ -111,7 +117,8 @@ The .Header properties
     max-width: 1100px;                                                  /* .(40426.01.7 RJS Was 10000;) */
     margin: auto;
     display: flex;
-    justify-content:left;
+    justify-content:center;
+    justify-content: space-between;
     align-items: center;
 }
 /* END .Header =============================*/
@@ -153,7 +160,7 @@ The .HeaderLogoText properties
   }
 
 .HeaderVideoDemo {
-  padding-left: 400px;
+  padding-left: 40px;
 }
 .HeaderVideoDemo a {
     text-decoration: none;
@@ -164,7 +171,7 @@ The .HeaderLogoText properties
 }
 
 .HeaderLogon {
-  padding-left: 30px;
+  padding-right: 100px;
 }
 
 .HeaderLogon a {
@@ -202,11 +209,12 @@ The .Marketing properties
       display: flex;
       justify-content: center;
       flex-direction: column;
+      font-size: 15px;
       .item {
         display: flex;
-        align-items: center;
+        align-items: top;
         padding: 4px 0px;
-        margin: 2px;
+        margin: 0px;
         background: blue;
         color: #fff;
         font-weight: 500;
@@ -220,7 +228,7 @@ The .Marketing properties
           width: 15px;
           height: 15px;
           margin-right: 10px;
-          background: url(https://slack-files.com/files-pub/T043MHPU3-F078S219N-67c52b377e/gs_bullet-checkmark.svg) center center no-repeat;
+         /*background: url(https://slack-files.com/files-pub/T043MHPU3-F078S219N-67c52b377e/gs_bullet-checkmark.svg) center center no-repeat;*/
       }
       }
       .itemshowmore {
@@ -343,7 +351,7 @@ The Modal Popup properties
   display: none;
   align-items:first baseline;
   justify-content: center;
-  padding-left: 50px;                                                   /* .(40426.01.16 RJS Added;) */
+  padding-left: -60px;                                                   /* .(40426.01.16 RJS Added;) */
   top: 0px;                                                             /* .(40426.01.17 RJS Added;) */
 }
 
@@ -421,6 +429,52 @@ The .FooterLogoText properties
     color: var(--Header_Menu_font-color);
     font: style italic;
 }
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: -90;
+  top: 700;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.content {
+  top: 115px;
+  width: 50%;
+  padding: 8px 14px;
+}
+h1 {
+  font-size: .8rem;
+}
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 
 
 /*===========================================*/
@@ -435,59 +489,87 @@ iPhone Landscape
 and (min-width: 621px)
 and (max-width: 1000px)
 {
+
+
+  html {
+    width: var(--SevenHundredPixelWidth);
+  }
+  body {
+    width: var(--SevenHundredPixelWidth);
+  }
+  .container {
+    width: var(--SevenHundredPixelWidth);
+  }
   .Header {
     height: 50px;                                                       /* .(40426.01.25 RJS Was: 15%;) */
-    width: 650px;                                                       /* .(40426.01.26 RJS Added) */
+    width: var(--SevenHundredPixelWidth);
   }
   .AIHeaderLogo a {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .HeaderLogoText a {                                                   /* .(40410.06.4 RJS Beg Add Tablet @Media styles) */
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-weight: 400;
-  }
-  .AIMyDocsText {                                                       /* .(40410.06.4 RJS Beg Add Tablet @Media styles) */
-    font-size: .85rem;
-    font-weight: 400;
+    padding-left: 0px;
     text-decoration: underline;
   }
-  .Marketing {
-    top: 47px;
-    height: 125px;                                                      /* .(40426.01.27 RJS Was: 185px;) */
-    width: 650px;                                                       /* .(40426.01.28 RJS Beg Added) */
-    padding-left: 15px;
+  .AIMyDocsText {                                                       /* .(40410.06.4 RJS Beg Add Tablet @Media styles) */
+    font-size: .5rem;
+    font-weight: 400;
   }
-  .Marketing li {
-    font-size: .7rem;                                                   /* .(40426.01.28 RJS End) */
-  }
-  .MarketingTable tr{
-    height: 20px;
-  }
-  .MarketingText {
-    margin-left: 1rem;
-    margin-top: .5rem;
-    color: white;
-    text-align: left;
-    font-size: .95rem;
-  }
-  .MarketingBreak {
-    display: block;
-  }
-  .TR2, .TR3 {
-    display: none;
-  }
+/*------------------------------------------------
+The .Marketing properties
+-------------------------------------------------*/
+.Marketing {                                                            /* .(40426.01.10 RJS Beg Changed radically;) */
+  top: 50px;
+  width: var(--SevenHundredPixelWidth);
+  padding-left: 0px;
+  height: 85px;
+    .list {
+      width: 680px;
+      padding-left: -40px;
+      margin: 0;
+      background: blue;
+      display: flex;
+      font-size: 11px;
+      .item {
+        padding-left: 0px;
+        margin: 0px 0px -6px -15px;
+      }
+      .itemshowmore {
+          padding: 4px 0px;
+          margin: 0px 0px 0px 0px;
+          font-size: 1rem;
+          &:hover {
+            margin-left: 10px;
+          }
+        }
+      }
+     }                                                                  /* .(40426.01.10 RJS End) */
   .Chat{
-    top: 150px;                                                         /* .(40426.01.29 RJS Was 20px) */
+    top: 130px;                                                         /* .(40426.01.29 RJS Was 20px) */
+    width: var(--SevenHundredPixelWidth);
+    height: 620px;
   }
-  .Footer{
-    display: none;
+  .footer {
+    width: var(--SevenHundredPixelWidth);
+  }
+  .FooterLogoText {
+    padding-right: 540px;
   }
   /*For popup*/
+  .content {
+    top: 65px;
+    width: 75%;
+    padding: 8px 14px;
+  }
+  .modal {
+    left: -10px;
+  }
   h1 {
     font-size: .8rem;
   }
   /*end popup*/
-
 }
 
 /*-----------------------------------------
@@ -578,47 +660,5 @@ and (max-width: 440px)
 
 }
 
-
-/* R-1 END BLOCK ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
-
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 700;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
 
 /* END CSS */

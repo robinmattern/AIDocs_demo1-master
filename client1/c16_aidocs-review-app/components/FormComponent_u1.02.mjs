@@ -127,6 +127,15 @@ class FormComponent extends LitElement {
         background-color  :  yellow;
         }                                                               /* .(40429.02.3 RJS End) */
 
+        @media only screen
+        and (min-width: 621px)
+        and (max-width: 1000px)
+          {
+            .fld-text {
+              max-width       :  550px;
+              width: 1500px;
+            }
+          }
       @media only screen
       and (max-width: 440px)
       {
