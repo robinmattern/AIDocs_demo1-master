@@ -72,7 +72,7 @@ return  aColor
         --Assistant-FontColor       : #fff;;   /* #000     #fff;;   White */
          }
         #spacer {
-          height          :  0px;                                       /* .(40429.01.4 RJS Remote spacer).(40408.01.6 RAM Was: 20px; in v1.03.40408.1233-Rick) */
+          height          :  30px;                                       /* .(40429.01.4 RJS Remote spacer).(40408.01.6 RAM Was: 20px; in v1.03.40408.1233-Rick) */
           }
         #messages-container_x {                                         /*#.(40501.07.3 RAM Beg When was this disabled?) */
           display         :  flex;
@@ -91,7 +91,7 @@ return  aColor
           max-width       :  780px;                                     /* .(40426.01.3 RJS Style changes, was 655px;) */
           min-width       :  300px;
           min-height      :  15px;
-          margin          :  5px auto;
+          margin          :  18px auto;
           margin-left     :  80px;
           margin-right    :  6px;
           padding         :  5px;           /* was 20px; or 10px; */
@@ -209,7 +209,8 @@ return  aColor
  return html`
         <div class="message ${ message.role === 'user' ? 'user-message' : 'assistant-message'}">
           ${ message.role === 'user' ? message.message : unsafeHTML( message.message ) }                       <!-- .(40411.03.5 RAM fmt <br>s) -->
-        </div>
+          </div>
+<!--      <div><button type="submit">Print</button></div>-->                                                   <!--  (40505.01.1 RJS Attempt to add a print button) -->            
         `;
         }
 //    ---------------------------------------------------------
