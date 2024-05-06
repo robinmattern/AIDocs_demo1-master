@@ -115,10 +115,16 @@ body {
     margin: 0 auto;                                                     /* .(40501.01.2 RJS Add 0 auto to body margin) */
     font-family: var(--GlobalFontFamily);
 }
+
 .container {                                                            /* .(40502.02.3 RJS Beg Add .container) */
-  align-self: center;
+/*  align-self: center;
   margin: 0 auto;
-  width: 80%;
+  width: 80%;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+
 }                                                                       /* .(40502.02.3 RJS End) */
 /*------------------------------------------------
 The .Header properties
@@ -127,6 +133,7 @@ The .Header properties
     background: var(--Header_background-color);
     width: 100%;
     height: 60px;
+    top: 0;
     position: fixed;  /*was relative*/
     z-index: 2;                                                         /* .(40426.01.6 RJS Was 1000;) */
     max-width: 1100px;                                                  /* .(40426.01.7 RJS Was 1000;) */
@@ -202,9 +209,11 @@ The .HeaderLogoText properties
 The .Marketing properties
 -------------------------------------------------*/
 .Marketing {                                                            /* .(40426.01.10 RJS Beg Changed radically;) */
-  width: 100vw;
+  width: 100%;
   height: 130px;                                                        /* .(40429.01.1 RJS Add Height) */
   top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
   position: fixed;  /*was relative*/
   z-index: 2;
   display: flex;
@@ -245,7 +254,7 @@ The .Marketing properties
           content:' ';
           width: 15px;
           height: 15px;
-          margin-right: 10px;
+          margin-right: 1px;
 /*        background: url(https://slack-files.com/files-pub/T043MHPU3-F078S219N-67c52b377e/gs_bullet-checkmark.svg) center center no-repeat; *//*#.(40501.09.x RJS Cut Item icon) */
           }
       }  /* eos .item  */
@@ -317,10 +326,10 @@ The .Chat properties
   font-size: 1.2rem;
   font-weight: 600;
 /*text-align: left;                                                   *//*#.(40502.02.5 RJS Cut).(40502.01.3 RAM Add, Don't center messages) */
-  top: 190px;                                                           /* .(40429.01.4 RJS Was: 183px;).(40426.01.14 RJS Was 120px;) *//*var(--Chat_top-margin);<---ADD to adjust the top position .(40410.06.2 RJS Change Chat Height, was 60).(40408.01.5 RAM Was: 40px) */
+  top: 127px;                                                           /* .(40429.01.4 RJS Was: 183px;).(40426.01.14 RJS Was 120px;) *//*var(--Chat_top-margin);<---ADD to adjust the top position .(40410.06.2 RJS Change Chat Height, was 60).(40408.01.5 RAM Was: 40px) */
   overflow-y: scroll;                                                   /* .(40426.01.15 RJS Beg Added) */
   scroll-behavior: auto;
-  scrollbar-color: #A1A1A1 #DDDDDD;                                     /* .(40501.02.1 RJS Fix Scrollbar for .chat) */
+  scrollbar-color: blue cornflowerblue;  /*#A1A1A1 #DDDDDD;*/                                 /* .(40501.02.1 RJS Fix Scrollbar for .chat) (40505.02.2 RJS Playing with different colors for scrollbar)*/
 }
 
 body::-webkit-scrollbar {                                               /* .(40501.02.2 RJS Hide Scrollbar for body) */
@@ -404,7 +413,7 @@ The .Footer properties
 .Footer {
     background: blue;/*var(--Footer_background-color);*/
     width: 100%;
-    height: 3%;
+    height: 25px;
     /*top: 80px;  Removed in place of the bottom property*/
     bottom: 0;
     position: fixed;
@@ -504,7 +513,7 @@ iPhone Landscape
 =========================================*/
 @media only screen
 and (min-width: 621px)
-and (max-width: 1000px)
+and (max-width: 900px)
 {
 
   html {
@@ -540,7 +549,7 @@ The .Marketing properties
   top: 50px;
   width: var(--SevenHundredPixelWidth);
   padding-left: 0px;
-/*height: 180px;                                                      *//*#.(40501.06.13 RJS).(40501.06.5 RAM Chg height due to word wrap; was 120px??).(40426.01.27 RJS Was: 185px;) */
+  max-width: 900px;
   height: 85px;                                                         /* .(40501.06.13 RJS Chg height back to 85px) */
     .list {
       width: 680px;
@@ -551,7 +560,7 @@ The .Marketing properties
       font-size: 11px;
       .item {
         padding-left: 0px;
-        margin: 0px 0px -6px -15px;
+        margin: 0px 0px -6px -2px;
       }
       .itemshowmore {
           padding: 4px 0px;
@@ -564,11 +573,12 @@ The .Marketing properties
       }
      }                                                                  /* .(40503.03.1 RJS End).(40426.01.10 RJS End) */
   .Chat{
-    top: 130px;                                                         /* .(40426.01.29 RJS Was 20px) */
+    top: 60px;                                                         /* .(40426.01.29 RJS Was 20px) */
     width: var(--SevenHundredPixelWidth);                               /* .(40503.05.7 RJS Use SevenHundredPixelWidth) */
-    height: 620px;
+    height: 650px;
   }
-  .footer {
+
+  .Footer {
     width: var(--SevenHundredPixelWidth);                               /* .(40503.05.8 RJS Use SevenHundredPixelWidth) */
   }
   .FooterLogoText {                                                     /* .(40503.03.2 RJS Beg Changed lots) */

@@ -117,9 +117,9 @@ class FormComponent extends LitElement {
         position        :  relative;
         padding-left    :  40px;
         padding-bottom  :  5px;
-        padding-top     :  20px;
+        padding-top     :  30px;
         text-align      :  left;
-        margin-top      :  10px;                                        /* .(40501.05.1 RAM Add space to top of .Documents) */
+        margin-top      :  -20px;                                        /* .(40501.05.1 RAM Add space to top of .Documents) */
         border-top      :  blue solid 2px;                              /* .(40429.05.2 RJS Beg Add border-top) */
         }
       .DocumentTitle {                                                  /* .(40429.02.3 RJS Add .DocumentTitle ) */
@@ -133,15 +133,16 @@ class FormComponent extends LitElement {
         background-color  :  yellow;
         }                                                               /* .(40429.02.3 RJS End) */
 
-        @media only screen                                              /* .(40503.01.1 RJS Beg iPad Responsiveness) */
-        and (min-width: 621px)
-        and (max-width: 1000px)
-          {
-            .fld-text {
-              max-width       :  550px;
-              width: 1500px;
-            }
-          }                                                             /* .(40503.01.1 RJS End) */
+      @media only screen                                              /* .(40503.01.1 RJS Beg iPad Responsiveness) */
+      and (min-width: 621px)
+      and (max-width: 1000px)
+      {
+        .fld-text {
+          max-width       :  550px;
+          width           : 1500px;
+          font-size       : .8rem;
+        }
+      }                                                             /* .(40503.01.1 RJS End) */
       @media only screen
       and (max-width: 440px)
       {

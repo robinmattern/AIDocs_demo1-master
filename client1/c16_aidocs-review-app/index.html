@@ -67,10 +67,9 @@
         <link rel="stylesheet"    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
         <link rel="stylesheet"    href="index.css">
     </head>
-
     <body>
 <!--  <center> -->                                                              <!--#.(40502.01.1 RAM Add <center>).(40502.02.1) -->
-      <div class="container">                                                   <!-- .(40502.02.1 RJS Add .container div) -->
+  <div class="container">                                                   <!-- .(40502.02.1 RJS Add .container div) -->
     <!-- Header Section -->                                                     <!-- .(40501.03.1 RJS Add Section Comments) -->
         <div class="Header">
         <!-- Logo -->
@@ -110,7 +109,7 @@
     <!--</div> -->                                                              <!--#.(40501.04.1 RJS End).(40426.03.1 RJS End) -->
                                                                                 <!--#.(40412.03.4 RJS Cut: Hidden Section) -->
 
-<!-- Chat Section -->                                                           <!-- .(40426.03.2 RJS Beg Moved up to here) -->
+  <!-- Chat Section -->                                                           <!-- .(40426.03.2 RJS Beg Moved up to here) -->
     <div class="Chat">
       <script type="module">
         import "./components/WorkspacesComponent_u1.04.mjs"                       // .(40408.04.1 RAM Beg New versions)
@@ -119,74 +118,68 @@
         console.log( "  Loaded components for AI Docs Review (top: 80px)" )
       </script>                                                                 <!-- .(40408.04.1 RAM End) -->
 
-      <div id="conversation-container" style="position: relative; top: 0px;">   <!--#.(40412.03.5 RJS Was 80px;) --><!-- .(40408.05.1 RAM Was 110px; in v1.04`40410.1727-Rick) -->
+      <div id="conversation-container" style="position: relative; top: -30px;">   <!--#.(40412.03.5 RJS Was 80px;) --><!-- .(40408.05.1 RAM Was 110px; in v1.04`40410.1727-Rick) -->
         <workspaces-component></workspaces-component>
         <messages-component></messages-component>
         <form-component></form-component>
       </div>                                                                    <!-- .(40426.03.2 RJS End Move) -->
     </div>                                                                      <!-- .(40410.05.1 RJS End) -->
-    <!-- END Chat Section -->
+  <!-- END Chat Section -->
 
-    <!-- Footer Section -->                                             <!-- .(40501.03.5 RAM Move Footer to here) -->
+  <!-- Footer Section -->                                             <!-- .(40501.03.5 RAM Move Footer to here) -->
         <div class="Footer">
               <div class="AIFooterLogo"><a href="#">AI</a><span class="FooterLogoText"><a href="#">MyDocs</a></span></div><!-- .(40415.08.1 RJS Add footer text) -->
         </div>
-    <!-- END Footer Section -->                                         <!-- .(40501.03.6) -->
+  <!-- END Footer Section -->                                         <!-- .(40501.03.6) -->
   </div>                                                                        <!-- .(40502.02.2 RJS Add .Container) -->
 
-    <!-- Popup Section -->                                              <!-- .(40501.03.7) -->
-        <div id="popup-box" class="modal">                              <!-- .(40410.06.1 RJS Beg Update Modal text) -->
-            <div class="content">
-                <h1 style="color: black">
-                    Here's what makes AIMyDocs special:
-                    <br><br>
-                    Effortless Search: Simply upload your documents and start searching with keywords. Our AI does the heavy lifting, finding exactly what you need in seconds.
-                    <br><br>
-                    Instant Results: No more waiting! AIMyDocs delivers results the moment you hit search, so you can get back to what matters most.
-                    <br><br>
-                    Unmatched Security: We take your privacy seriously. Your documents are encrypted both in transit and at rest, and we never share your information with anyone.
-                    <br><br>
-                    AIMyDocs is perfect for:
-                    <br><br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&#8226; Individuals with large document collections (personal finance, medical records, etc.)
-                    <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&#8226; Freelancers and independent contractors
-                    <br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&#8226; Anyone who needs to quickly access important information
-                    <br><br>
-                    Get Started Today!
-                    <br><br>
-                    Uploading a document is simple and secure. Pay a small fee per document, and enjoy the peace of mind that comes with knowing your information is always protected.
-                    <br><br>
-                    Sign up for a free trial! (Offer a limited number of free searches to incentivize users)
-                    <br><br>
-                    Learn more about AIMyDocs's pricing plans. (Link to a pricing page with clear per-document costs)
-                    <br><br>
-                    Read our FAQs for answers to common questions. (Address privacy concerns and data security measures)
-                    <br><br>
-                    AIMyDocs: Find what you need, when you need it.
-                </h1>
-                <a
-                    href="#"
-                    style="
-                        position: absolute;
-                        top: 5px;
-                        right: 20px;
-                        color: black;
-                        font-size: 30px;
-                        text-decoration: none;
-                    "
-                    >&times;</a
-                >
-            </div>
-        </div>                                                          <!-- .(40410.06.1 RJS End) -->
-    <!-- END Popup Section -->                                          <!-- .(40501.03.8) -->
-
-<!-- Footer -->
-        <div class="Footer">
-            <div class="AIFooterLogo"><a href="#">AI</a><span class="FooterLogoText"><a href="#">MyDocs</a></span></div><!-- .(40415.08.1 RJS Add footer text) -->
-        </div>
-    <!-- END Footer -->
+  <!-- Popup Section -->                                              <!-- .(40501.03.7) -->
+      <div id="popup-box" class="modal">                              <!-- .(40410.06.1 RJS Beg Update Modal text) -->
+          <div class="content">
+              <h1 style="color: black">
+                  Here's what makes AIMyDocs special:
+                  <br><br>
+                  Effortless Search: Simply upload your documents and start searching with keywords. Our AI does the heavy lifting, finding exactly what you need in seconds.
+                  <br><br>
+                  Instant Results: No more waiting! AIMyDocs delivers results the moment you hit search, so you can get back to what matters most.
+                  <br><br>
+                  Unmatched Security: We take your privacy seriously. Your documents are encrypted both in transit and at rest, and we never share your information with anyone.
+                  <br><br>
+                  AIMyDocs is perfect for:
+                  <br><br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&#8226; Individuals with large document collections (personal finance, medical records, etc.)
+                  <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&#8226; Freelancers and independent contractors
+                  <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&#8226; Anyone who needs to quickly access important information
+                  <br><br>
+                  Get Started Today!
+                  <br><br>
+                  Uploading a document is simple and secure. Pay a small fee per document, and enjoy the peace of mind that comes with knowing your information is always protected.
+                  <br><br>
+                  Sign up for a free trial! (Offer a limited number of free searches to incentivize users)
+                  <br><br>
+                  Learn more about AIMyDocs's pricing plans. (Link to a pricing page with clear per-document costs)
+                  <br><br>
+                  Read our FAQs for answers to common questions. (Address privacy concerns and data security measures)
+                  <br><br>
+                  AIMyDocs: Find what you need, when you need it.
+              </h1>
+              <a
+                  href="#"
+                  style="
+                      position: absolute;
+                      top: 5px;
+                      right: 20px;
+                      color: black;
+                      font-size: 30px;
+                      text-decoration: none;
+                  "
+                  >&times;</a
+              >
+          </div>
+      </div>                                                          <!-- .(40410.06.1 RJS End) -->
+  <!-- END Popup Section -->                                          <!-- .(40501.03.8) -->
 
 <!--  </center> -->                                                             <!--#.(40502.01.2 RAM Add <center>).(40502.02.2) -->
     </body>
